@@ -1,21 +1,24 @@
-# Spark 大型电商项目用户会话分析
+# Spark_User Session Analysis for Large E-commerce
 
 This project is mainly used in Internet e-commerce enterprises, using the big data statistical analysis platform developed by Spark technology to conduct complex analysis on various user behaviors (visiting behavior, shopping behavior, advertisement click behavior, etc.) of e-commerce websites. Use the data from statistical analysis to assist PM (product managers), data analysts and managers in the company to analyze the current product situation, and to continuously improve product design based on the results of user behavior analysis, as well as adjust the company's strategy and business. Finally, the goal of using big data technology to help improve the company's performance, turnover and market share is achieved.
 
-This project uses the three most commonly used technical frameworks in the Spark technology ecological stack, Spark Core, Spark SQL and Spark Streaming, to develop offline computing and real-time computing business modules. It has realized 4 business modules including user access session analysis, page single jump rate statistics, offline statistics of popular products, and real-time statistics of advertising traffic.
-
+This project uses the three most commonly used technical frameworks in the Spark technology ecological stack, <b>Spark Core</b>, <b>Spark SQL</b> and <b>Spark Streaming</b>, to develop offline computing and real-time computing business modules. It has realized 4 business modules including 
+1. user access session analysis, 
+2. page conversion rate statistics, 
+3. offline statistics of popular products, 
+4. real-time statistics of advertising traffic
+ 
 In the project, it focuses on the knowledge and technology of performance tuning, troubleshooting and data skew in line with actual enterprise projects. At the same time, the enterprise-level big data project development process is used to explain each business module, covering the whole process of project development, including Requirement analysis, scheme design, data design, coding implementation, testing and performance tuning, etc., fully restore the development process of real big data projects.
 
-# 模块介绍
-## 用户访问session分析
+# modules
+## user access session analysis
 
-该模块主要是对用户访问session进行统计分析，包括session的聚合指标计算、按时间比例随机抽取session、获取每天点击、下单和购买排名前10的品类、并获取top10品类的点击量排名前10的session。该模块可以让产品经理、数据分析师以及企业管理层形象地看到各种条件下的具体用户行为以及统计指标，从而对公司的产品设计以及业务发展战略做出调整。主要使用Spark Core实现。
+This module mainly conducts statistical analysis on user access sessions, including the calculation of aggregated indicators of sessions, randomly extracting sessions according to the time ratio, obtaining daily clicks, placing orders and purchasing the top 10 categories, and obtaining the top 10 clicks of the top 10 categories. session. This module allows product managers, data analysts and enterprise management to visually see specific user behaviors and statistical indicators under various conditions, so as to make adjustments to the company's product design and business development strategies. Mainly implemented using Spark Core.
 
-## 页面单跳转化率统计
+## page conversion rate statistics
 
-该模块主要是计算关键页面之间的单步跳转转化率，涉及到页面切片算法以及页面流匹配算法。该模块可以让产品经理、数据分析师以及企业管理层看到各个关键页面之间的转化率，从而对网页布局，进行更好的优化设计。主要使用Spark Core实现。
+This module mainly calculates the conversion rate of single-step jump between key pages, involving page slicing algorithm and page flow matching algorithm. This module allows product managers, data analysts and enterprise management to see the conversion rate between key pages, so as to better optimize the design of the page layout. Mainly implemented using Spark Core.
 
-## 热门商品离线统计
+## offline statistics of popular products
 
-该模块主要实现每天统计出各个区域的top3热门商品。然后使用Oozie进行离线统计任务的定时调度；使用Zeppeline进行数据可视化的报表展示。该模块可以让企业管理层看到公司售卖的商品的整体情况，从而对公司的商品相关的战略进行调整。主要使用Spark SQL实现。
-
+This module mainly realizes the daily statistics of the top 3 popular commodities in each region. Then use Oozie for timing scheduling of offline statistical tasks; use Zeppeline for data visualization report display. This module allows enterprise management to see the overall situation of the products sold by the company, so as to adjust the company's product-related strategies. Mainly implemented using Spark SQL.
