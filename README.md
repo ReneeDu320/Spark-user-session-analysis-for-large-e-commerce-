@@ -1,13 +1,10 @@
 # Spark 大型电商项目用户会话分析
 
-该项目为CSDN博客系列文章《Spark 大型电商项目实战》源码，  
-CSDN博客地址：http://blog.csdn.net/u012318074/article/category/6744423
+This project is mainly used in Internet e-commerce enterprises, using the big data statistical analysis platform developed by Spark technology to conduct complex analysis on various user behaviors (visiting behavior, shopping behavior, advertisement click behavior, etc.) of e-commerce websites. Use the data from statistical analysis to assist PM (product managers), data analysts and managers in the company to analyze the current product situation, and to continuously improve product design based on the results of user behavior analysis, as well as adjust the company's strategy and business. Finally, the goal of using big data technology to help improve the company's performance, turnover and market share is achieved.
 
-本项目主要用于互联网电商企业中，使用Spark技术开发的大数据统计分析平台，对电商网站的各种用户行为（访问行为、购物行为、广告点击行为等）进行复杂的分析。用统计分析出来的数据，辅助公司中的PM（产品经理）、数据分析师以及管理人员分析现有产品的情况，并根据用户行为分析结果持续改进产品的设计，以及调整公司的战略和业务。最终达到用大数据技术来帮助提升公司的业绩、营业额以及市场占有率的目标。
+This project uses the three most commonly used technical frameworks in the Spark technology ecological stack, Spark Core, Spark SQL and Spark Streaming, to develop offline computing and real-time computing business modules. It has realized 4 business modules including user access session analysis, page single jump rate statistics, offline statistics of popular products, and real-time statistics of advertising traffic.
 
-本项目使用了Spark技术生态栈中最常用的三个技术框架，Spark Core、Spark SQL和Spark Streaming，进行离线计算和实时计算业务模块的开发。实现了包括用户访问session分析、页面单跳转化率统计、热门商品离线统计、广告流量实时统计4个业务模块。
-
-在项目中，重点介绍符合实际企业项目中的性能调优、troubleshooting以及数据倾斜等知识和技术，同时以企业级大数据项目开发流程贯穿每个业务模块的讲解，涵盖了项目开发全流程，包括需求分析、方案设计、数据设计、编码实现、测试以及性能调优等环节，全面还原真实大数据项目的开发流程。
+In the project, it focuses on the knowledge and technology of performance tuning, troubleshooting and data skew in line with actual enterprise projects. At the same time, the enterprise-level big data project development process is used to explain each business module, covering the whole process of project development, including Requirement analysis, scheme design, data design, coding implementation, testing and performance tuning, etc., fully restore the development process of real big data projects.
 
 # 模块介绍
 ## 用户访问session分析
@@ -22,7 +19,3 @@ CSDN博客地址：http://blog.csdn.net/u012318074/article/category/6744423
 
 该模块主要实现每天统计出各个区域的top3热门商品。然后使用Oozie进行离线统计任务的定时调度；使用Zeppeline进行数据可视化的报表展示。该模块可以让企业管理层看到公司售卖的商品的整体情况，从而对公司的商品相关的战略进行调整。主要使用Spark SQL实现。
 
-# 联系方式：
-Erik_ly@163.com
-
-LiuyangErik@gmail.com  
